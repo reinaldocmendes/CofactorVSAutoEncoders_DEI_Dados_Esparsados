@@ -44,7 +44,6 @@ Para realização experimental algumas similaridades tiveram seus valores modifi
 
 * File "Resultados_CoFactor_Vs_CAE_inv_less_5.ipynb":  Similaridade <= 5 
 * File "Resultados_CoFactor_Vs_CAE_inv_less_10.ipynb": Similaridade <= 10
-* File "Resultados_CoFactor_Vs_VAE_inv_less_70_pct.ipynb": Similaridade <= (70% do maior valor)
 * File "Resultados_CoFactor_Vs_VAE_inv_less_80_pct.ipynb": Similaridade <= (80% do maior valor)
 * File "Resultados_CoFactor_Vs_VAE_inv_less_95_pct.ipynb": Similaridade <= (95% do maior valor)
 * File "Resultados_CoFactor_Vs_VAE_inv_less_98_pct.ipynb": Similaridade <= (98% do maior valor)
@@ -73,11 +72,11 @@ Para métrica NDCG, os valores de @k entre 10 e 50 tem resultados similares, no 
 * Em todas as Comparações o BaseLine (CoFactor) utilizado apresentou melhor resultado do que as representações propostas do vetor original.
 
 ## VAE
-Nós Gráficos construidos atráves das matrizes geradas pelo o AutoEncoder "VAE" o comportamento quanto a variação do @k mostra uma crescente no desempenho para metrica Recal. O NDCG mantém valores apróximados e a métrica MAP mostrando uma decrescimento de desempenho do algoritmo conforme o valor de @k cresce.
+Nós Gráficos apresentados nesse documento que estão relacionados ao AutoEncoder "VAE" o comportamento quanto a variação do @k mostra uma crescente no desempenho para metrica Recall. O NDCG mantém valores apróximados e a métrica MAP mostrando uma decrescimento de desempenho do algoritmo conforme o valor de @k cresce.
 
-Aqui também chama bastante atenção o fato de que as representações de matrizes com menor percentual (10%, 20% e 30%) tiveram resultados muito ruins comparadas com os resultados das outras representações. O algoritmo convergiu rapidamente durante o treinamento para as matrizes de pequenas representações o que demostrou que ele foi muito bem no treino, entretanto, nos testes seu desempenho deixou muito a desejar.
+Para o AutoEncoder "VAE" o esparsamento dos dados melhorou significativamente os resultados. Dados mais densos tenderam a convergir mais rapidamente, entretanto, apresentam metricas muito ruins compararadas ao serem comparadas com versões do conjunto de dados com espasamentos maiores (acima de 90%).
 
-#### Tornar o DataSet mais esparso não foi suficiente para obter resultados melhores do que os apresentados pelo BaseLine
+#### Tornar o DataSet mais esparso obteve melhores resultados do que um DataSet denso, no entanto, não superam os resultados apresentados pelo BaseLine.
 
 
 * Em todas as Comparações o BaseLine (CoFactor) utilizado apresentou melhor resultado do que as representações propostas do vetor original.
