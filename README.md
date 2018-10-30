@@ -59,3 +59,15 @@ Para cada usuário, todas as métricas comparam a classficação prevista de ite
 Nos resultados apresentados nos gráficos que seguem, foram considerados nos experimentos um "ranked list" de tamanhos fixados em: 10, 20, 50 e 100, para cada medida de avaliação, por exemplo, NDCG@20 significado que foi considerado um ranked list dos 20 itens no topo da lista.
 
 # Análise Geral
+
+
+## CAE
+Nós Gráficos construidos atráves das matrizes geradas pelo o AutoEncoder "CAE" é possível verificar que mesmo alterando o tipo da rede neural (vgg's, resnet ou xception) eles apresentam um comportamento bastante similar.
+
+Para a métrica "Recall" quanto maior o valor de @k melhor o resultado.
+
+Para métrica NDCG, os valores de @k entre 10 e 50 tem resultados similares, no entanto, para um @k de 100 o desempenho do algoritmo aumenta consideravelmente. Na métrica de avaliação MAP o algoritmo tem um comportamento contrário ao Recall, quanto maior o valor de @k pior foi seu desempenho.
+
+### Tornar o DataSet mais esparso não foi suficiente para modificar significativamente os resultados.¶
+
+* Em todas as Comparações o BaseLine (CoFactor) utilizado apresentou melhor resultado do que as representações propostas do vetor original.
