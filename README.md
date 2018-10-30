@@ -68,16 +68,16 @@ Para a métrica "Recall" quanto maior o valor de @k melhor o resultado.
 
 Para métrica NDCG, os valores de @k entre 10 e 50 tem resultados similares, no entanto, para um @k de 100 o desempenho do algoritmo aumenta consideravelmente. Na métrica de avaliação MAP o algoritmo tem um comportamento contrário ao Recall, quanto maior o valor de @k pior foi seu desempenho.
 
-### Tornar o DataSet mais esparso não foi suficiente para modificar significativamente os resultados.
+#### Tornar o DataSet mais esparso não foi suficiente para obter resultados melhores do que os apresentados pelo BaseLine
 
 * Em todas as Comparações o BaseLine (CoFactor) utilizado apresentou melhor resultado do que as representações propostas do vetor original.
 
 ## VAE
-Nós Gráficos construidos atráves das matrizes geradas pelo o AutoEncoder "VAE" o comportamento quanto a variação do @k para as métricas utilizadas é o mesmo observado no AutoEncoder "CAE", há uma crescente no desempenho para metrica Recall, NDCG mantém valores similares somente tendo uma crescente para @k igual a 100 e a métrica MAP mostrando uma decrescimento de desempenho do algoritmo conforme o valor de @k cresce.
-
-No geral os resultados obtidos pelo algoritmo quando utilizado as matrizes de representação geradas pelo AutoEncoder VAE foi pior do que os resultados encontrados por "CAE e Sparse".
+Nós Gráficos construidos atráves das matrizes geradas pelo o AutoEncoder "VAE" o comportamento quanto a variação do @k mostra uma crescente no desempenho para metrica Recal. O NDCG mantém valores apróximados e a métrica MAP mostrando uma decrescimento de desempenho do algoritmo conforme o valor de @k cresce.
 
 Aqui também chama bastante atenção o fato de que as representações de matrizes com menor percentual (10%, 20% e 30%) tiveram resultados muito ruins comparadas com os resultados das outras representações. O algoritmo convergiu rapidamente durante o treinamento para as matrizes de pequenas representações o que demostrou que ele foi muito bem no treino, entretanto, nos testes seu desempenho deixou muito a desejar.
 
+#### Tornar o DataSet mais esparso não foi suficiente para obter resultados melhores do que os apresentados pelo BaseLine
 
-Em todas as Comparações o BaseLine (CoFactor) utilizado apresentou melhor resultado do que as representações propostas do vetor original
+
+* Em todas as Comparações o BaseLine (CoFactor) utilizado apresentou melhor resultado do que as representações propostas do vetor original.
